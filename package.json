@@ -1,0 +1,23 @@
+{
+  "name": "hapi",
+  "version": "1.0.0",
+  "description": "node hapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/footmess/hapi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/footmess/hapi/issues"
+  },
+  "homepage": "https://github.com/footmess/hapi#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "hapi": "16"
+  }
+}
