@@ -1,23 +1,34 @@
 {
-  "name": "hapi",
-  "version": "1.0.0",
-  "description": "node hapi",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/footmess/hapi.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/footmess/hapi/issues"
-  },
-  "homepage": "https://github.com/footmess/hapi#readme",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "hapi": "16"
-  }
+	"name": "hapi",
+	"version": "1.0.0",
+	"description": "node hapi",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/footmess/hapi.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/footmess/hapi/issues"
+	},
+	"homepage": "https://github.com/footmess/hapi#readme",
+	"dependencies": {
+		"dotenv": "^8.2.0",
+		"hapi": "16",
+		"hapi-swagger": "7",
+		"inert": "^4.2.1",
+		"joi": "13",
+		"mysql2": "^2.0.2",
+		"package": "^1.0.1",
+		"sequelize": "^5.21.3",
+		"vision": "4"
+	},
+	"devDependencies": {
+		"sequelize-cli": "^5.5.1"
+	}
 }

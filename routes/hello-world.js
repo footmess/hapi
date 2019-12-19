@@ -6,6 +6,12 @@ module.exports = [
 		path: '/',
 		handler: (request, reply) => {
 			reply('hello hapi');
+		},
+
+		//为 REST 接口添加 Swagger 标记
+		config: {
+			tags: [ 'api', 'demo' ],
+			description: '测试啦啦啦啦'
 		}
 	}
 ];
