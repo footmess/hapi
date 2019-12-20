@@ -92,7 +92,7 @@ boom@4.x.x:
   dependencies:
     hoek "4.x.x"
 
-boom@5.x.x, boom@^5.2.0:
+boom@5.x.x, boom@^5.0.0, boom@^5.2.0:
   version "5.2.0"
   resolved "https://registry.npmjs.org/boom/-/boom-5.2.0.tgz#5dd9da6ee3a5f302077436290cb717d3f4a54e02"
   integrity sha512-Z5BTk6ZRe4tXXQlkqftmsAUANpXmuwlsF5Oov8ThoMbQRzdGTA1ngYRW160GexgOgjsFOKJz0LYhoNi+2AMBUw==
@@ -433,6 +433,15 @@ handlebars@^4.0.11:
   optionalDependencies:
     uglify-js "^3.1.4"
 
+hapi-pagination@1:
+  version "1.22.0"
+  resolved "https://registry.npmjs.org/hapi-pagination/-/hapi-pagination-1.22.0.tgz#0809ccd83fa05d6c09b61d01c9fd2a08afeb3265"
+  integrity sha1-CAnM2D+gXWwJth0Byf0qCK/rMmU=
+  dependencies:
+    boom "^5.0.0"
+    hoek "^4.0.2"
+    joi "^10.2.1"
+
 hapi-swagger@7:
   version "7.10.0"
   resolved "https://registry.npmjs.org/hapi-swagger/-/hapi-swagger-7.10.0.tgz#acdc53d4064f7acee39a9c8c8105c5a6cc4f953f"
@@ -481,7 +490,7 @@ heavy@4.x.x:
     hoek "4.x.x"
     joi "10.x.x"
 
-hoek@4.x.x, hoek@^4.2.0:
+hoek@4.x.x, hoek@^4.0.2, hoek@^4.2.0:
   version "4.2.1"
   resolved "https://registry.npmjs.org/hoek/-/hoek-4.2.1.tgz#9634502aa12c445dd5a7c5734b572bb8738aacbb"
   integrity sha512-QLg82fGkfnJ/4iy1xZ81/9SIJiq1NGFUMGs6ParyjBZr6jW2Ufj/snDqTHixNlHdPNwN2RLVD0Pi3igeK9+JfA==
@@ -589,7 +598,7 @@ items@2.x.x:
   resolved "https://registry.npmjs.org/items/-/items-2.1.2.tgz#0849354595805d586dac98e7e6e85556ea838558"
   integrity sha512-kezcEqgB97BGeZZYtX/MA8AG410ptURstvnz5RAgyFZ8wQFPMxHY8GpTq+/ZHKT3frSlIthUq7EvLt9xn3TvXg==
 
-joi@10.x.x:
+joi@10.x.x, joi@^10.2.1:
   version "10.6.0"
   resolved "https://registry.npmjs.org/joi/-/joi-10.6.0.tgz#52587f02d52b8b75cdb0c74f0b164a191a0e1fc2"
   integrity sha512-hBF3LcqyAid+9X/pwg+eXjD2QBZI5eXnBFJYaAkH4SK3mp9QSRiiQnDYlmlz5pccMvnLcJRS4whhDOTCkmsAdQ==

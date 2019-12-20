@@ -1,4 +1,7 @@
 //数据库连接配置
+const dotenv = require('dotenv');
+dotenv.config();
+
 if (process.env.NODE_ENV === 'production') {
 	console.log('prod');
 } else {
@@ -15,6 +18,7 @@ module.exports = {
 		host: env.MYSQL_HOST,
 		port: env.MYSQL_PORT,
 		dialect: 'mysql',
+		timezone: '+08:00',
 		operatorsAliases: false
 	},
 	production: {
@@ -24,6 +28,7 @@ module.exports = {
 		host: env.MYSQL_HOST,
 		port: env.MYSQL_PORT,
 		dialect: 'mysql',
+		timezone: '+08:00',
 		operatorsAliases: false
 	}
 };

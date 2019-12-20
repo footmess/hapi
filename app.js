@@ -8,6 +8,7 @@ const RoutesHello = require('./routes/hello-world');
 const RoutesShop = require('./routes/shops');
 const RoutesOrder = require('./routes/orders');
 const PluginHapiSwagger = require('./plugins/hapi-swagger');
+const PluginHapiPagination = require('./plugins/hapi-pagination');
 
 const server = new Hapi.Server();
 
@@ -19,7 +20,7 @@ server.connection({
 
 const init = async () => {
 	//通过 server.register 挂载 swagger 插件配置
-	await server.register([ ...PluginHapiSwagger ]);
+	await server.register([ ...PluginHapiSwagger, PluginHapiPagination ]);
 
 	server.route([
 		//创建一个hello接口
@@ -30,7 +31,7 @@ const init = async () => {
 
 	//启动服务
 	await server.start();
-	console.log(process.env.MYSQL_PASSWORD, process.env.NODE_ENV);
+	console.log(process.env.NODE_ENV);
 	console.log(`Server running at: ${server.info.uri}`);
 };
 
