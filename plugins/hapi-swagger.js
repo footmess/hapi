@@ -28,6 +28,10 @@ module.exports = [
 				{
 					name: 'orders',
 					description: '订单相关'
+				},
+				{
+					name: 'users',
+					description: '用户相关'
 				}
 			]
 		}

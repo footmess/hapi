@@ -1,4 +1,4 @@
-//店铺表
+//店铺表数据模型
 module.exports = (sequelize, DataTypes) =>
 	sequelize.define(
 		'shops',

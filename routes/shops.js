@@ -1,7 +1,7 @@
 //店铺相关api
 const Joi = require('joi');
 const models = require('../models');
-const { paginationDefine } = require('../utils/router-pagination');
+const { paginationDefine, jwtHeaderDefine } = require('../utils/router-help');
 const GROUP_NAME = 'shops';
 
 module.exports = [
@@ -18,13 +18,13 @@ module.exports = [
 				limit: req.query.limit,
 				offset: (req.query.page - 1) * req.query.limit
 			});
+			console.log(req.auth.credentials);
 			//在 findAll 中加入一个 attributes 的约束  findAll({ attributes: { exclude: ['password'] } })
 			// const result = await models.shops.findAll({ attributes: [ 'id', 'name' ] });
 			rep({ results, totalCount });
 		},
 		config: {
 			tags: [ 'api', GROUP_NAME ],
-			auth: false,
 			description: '获取店铺列表',
 			//通过 validate.query 来约束：
 			validate: {
@@ -37,10 +37,14 @@ module.exports = [
 					...paginationDefine
 				},
 				//适用于 header 额外字段约束的 headers 验证
-				headers: Joi.object({
-					authorization: Joi.string().required()
-				}).unknown()
-			}
+				// headers: Joi.object({
+				// 	authorization: Joi.string().required()
+				// }).unknown()
+
+				//引入公共header配置
+				...jwtHeaderDefine
+			},
+			auth: false
 		}
 	},
 	{
@@ -66,7 +70,6 @@ module.exports = [
 		},
 		config: {
 			tags: [ 'api', GROUP_NAME ],
-			auth: false,
 			description: '获取店铺的商品列表',
 			validate: {
 				params: {
@@ -74,8 +77,14 @@ module.exports = [
 				},
 				query: {
 					...paginationDefine
-				}
-			}
+				},
+				//适用于 header 额外字段约束的 headers 验证
+				// headers: Joi.object({
+				// 	authorization: Joi.string().required()
+				// }).unknown()
+				...jwtHeaderDefine
+			},
+			auth: false
 		}
 	}
 ];
