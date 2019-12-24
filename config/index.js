@@ -5,5 +5,7 @@ module.exports = {
 	port: env.PORT,
 	jwtSecret: env.JWT_SECRET,
 	wxAppid: env.AppId,
+	wxMchid: env.Mchid,
+	wxPayApiKey: env.PayApiKey,
 	wxSecret: env.AppSecret
 };

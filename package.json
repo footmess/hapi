@@ -30,7 +30,8 @@
 		"mysql2": "^2.0.2",
 		"package": "^1.0.1",
 		"sequelize": "^5.21.3",
-		"vision": "4"
+		"vision": "4",
+		"xml2js": "^0.4.23"
 	},
 	"devDependencies": {
 		"sequelize-cli": "^5.5.1"

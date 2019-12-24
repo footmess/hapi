@@ -13,7 +13,8 @@ module.exports = (sequelize, DataTypes) =>
 				allowNull: false
 			},
 			payment_status: {
-				type: Sequelize.ENUM('0', '1'),
+				//支付状态 0 未支付 1 已支付
+				type: DataTypes.ENUM('0', '1'),
 				defaultValue: '0'
 			}
 		},
